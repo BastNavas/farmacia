@@ -4,13 +4,32 @@
   margin: 0;
 }
 
+:root {
+  --color1: rgb(96, 133, 233);
+  --color2: rgb(24, 89, 141);
+  --color3: rgb(225, 230, 235);
+  --fondo-box: #ffff;
+  --spacing-1: 1em;
+  --spacing-2: 1.5em;
+  --text-color1:rgba(17, 19, 24, 0.814);
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+
 #tabla1 {
   border: none;
   font-family: calibri;
 }
 
 .menu {
-  background: rgb(96, 133, 233);
+  background: var(--color1);
   width: 100%;
   padding: 10px;
 }
@@ -35,14 +54,13 @@
   color: white;
 }
 
-
 #volver {
   color: rgb(225, 230, 235);
   text-decoration: none;
   padding: 10px;
-  background-color: rgb(24, 89, 141);
+  background-color: var(--color2);
   border-radius: 30px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 #somos {
@@ -57,9 +75,9 @@
   color: rgb(2, 1, 1);
   text-decoration: none;
   padding: 10px;
-  background-color: rgb(159, 161, 158);
+  background-color: var(--fondo-box);
   border-style: ridge;
-  font-family: 'New Times Roman', Times, serif;
+  font-family: "New Times Roman", Times, serif;
 }
 
 #contacto {
@@ -70,9 +88,9 @@
   color: rgb(2, 1, 1);
   text-decoration: none;
   padding: 10px;
-  background-color: rgb(159, 161, 158);
+  background-color: var(--fondo-box);
   border-style: ridge;
-  font-family: 'New Times Roman', Times, serif;
+  font-family: "New Times Roman", Times, serif;
 }
 
 #borrar {
@@ -82,7 +100,7 @@
   text-decoration: none;
   padding: 5px;
   background-color: rgb(207, 19, 28);
-  font-family: 'arial', sans-serif;
+  font-family: "arial", sans-serif;
   border-radius: 5px;
   border: none;
   font-weight: bold;
@@ -99,12 +117,11 @@ p {
   max-width: 80%;
 }
 
-
 #descripcion {
   font-size: 1.5em;
   font-weight: bold;
   font-family: candara;
-  color: #333;
+  color: var(--text-color1);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -112,7 +129,7 @@ p {
 p {
   font-family: candara;
   font-weight: bold;
-  color: #665555;
+  color: var(--text-color1);
   margin-bottom: 20px;
 }
 
@@ -257,7 +274,6 @@ p {
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background: #e6e6ee41;
   padding: 10px;
   gap: 10px;
   align-items: center;
@@ -265,10 +281,14 @@ p {
 }
 
 .box {
-  background: #dedce49d;
+  background: var(--fondo-box);
   border-radius: 5px;
   box-sizing: border-box;
-  box-shadow: 1px 2px 15px 1px rgba(127, 131, 185, 0.555), 1px 0px 15px 5px rgba(47, 65, 97, 0.295);
+  border: 1px solid #3333333b;
+  padding: var(--spacing-2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .box1 p {
@@ -279,24 +299,19 @@ p {
 .content-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: 10px;
 }
 
 .content-text span {
-  color: rgb(15, 39, 117);
+  color: var(--text-color1);
   font-weight: bolder;
-  font-size: 2em;
-  font-family: calibri;
+  font-size: 1.25em;
 }
 
 .img-content {
   display: flex;
   justify-content: center;
-}
-
-.img-content img {
-  box-shadow: 1px 2px 15px 1px rgba(127, 131, 185, 0.555), 1px 0px 15px 5px rgba(47, 65, 97, 0.295);
 }
 
 #nota {
@@ -309,10 +324,10 @@ p {
   max-width: 400px;
   height: auto;
   margin-top: 20px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-@media screen and (max-width:769px) {
+@media screen and (max-width: 769px) {
   p {
     max-width: 100%;
   }
@@ -322,7 +337,7 @@ p {
   }
 }
 
-@media screen and (max-width:460px) {
+@media screen and (max-width: 460px) {
   p {
     max-width: 100%;
   }
@@ -330,19 +345,20 @@ p {
   .products {
     grid-template-columns: 1fr;
   }
-
 }
 
 .btn-comprar {
   padding: 10px;
-  background: linear-gradient(45deg, rgb(30, 73, 109), rgb(58, 117, 151), rgb(75, 145, 211));
+  background: linear-gradient(
+    45deg,
+    rgb(24, 161, 74),
+    rgb(31, 169, 107),
+    rgb(38, 166, 83)
+  );
   cursor: pointer;
-  border-radius: 10px;
-  color: rgb(204, 223, 236);
+  border-radius: 3px;
+  color: rgb(229, 235, 238);
   border: none;
-  box-sizing: border-box;
-  box-shadow: 1px 2px 15px 1px rgba(127, 131, 185, 0.555), 1px 0px 15px 5px rgba(47, 65, 97, 0.295);
-  width: 50%;
   max-width: 200px;
   margin-bottom: 10px;
 }
@@ -400,6 +416,6 @@ p {
   margin-bottom: 1em;
 }
 
-#section2:has(.next):hover{
-   background: blue;
+#section2:has(.next):hover {
+  background: blue;
 }
