@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto farmavida</title>
+    <link rel="stylesheet" href="carpeta/style.css">
+    <link rel="stylesheet" href="carpeta/phone.css">
+    <script src="js/animated.js" defer></script>
+</head>
+
+<body id="contacto">
+    <header class="menu">
+        <img src="assets/burger.png" alt="" class="burger">
+
+        <ul class="listBoton">
+            <li> <a href="index.html">home </search></a><br></li>
+            <li> <a href="contacto.html">contacto </search></a><br></li>
+            <li> <a href="servicios.html">Servivos </search></a><br></li>
+            <li> <a href="Quienes somos.html">quienes somos </search></a><br></li>
+
+        </ul>
+    </header>
+    <h1>contacto</h1>
+    <p>Si deseas ponerte en contacto con nosotros, puedes hacerlo a través de los siguientes medios:</p><br>
+    <h2>Teléfono</h2>
+    <p>Puedes llamarnos al número de teléfono <b>3108689165</b> para hablar con uno de nuestros representantes de
+        servicio al cliente. Estamos disponibles de lunes a viernes de 7:00 a.m. a 10:00 p.m.</p><br>
+    <h2>Correo electrónico</h2>
+    <p>También puedes enviarnos un correo electrónico a <b>farmavida@gmail.com</b> con cualquier pregunta o comentario
+        que tengas sobre nuestros servicios.</p><br>
+    <h2>Dirección</h2>
+    <p>Nuestra farmacia está ubicada en la siguiente dirección:</p>
+    <p><b>cucurital, inirida - Guainia</b></p><br>
+    <h2>Formulario de contacto</h2>
+    <p>Si prefieres enviarnos un mensaje directamente desde nuestro sitio web, puedes utilizar el siguiente formulario
+        de contacto:</p>
+    <form action="enviar_mensaje.php" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="Enviar" id="enviar">
+        <input type="reset" value="borrar" id="borrar">
+
+</body>
+
+</html>
